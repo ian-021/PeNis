@@ -1,6 +1,8 @@
 # Prevent Lenis (PeNis)
-Chrome extension that disables [Lenis](https://github.com/darkroomengineering/lenis) smooth scrolling everywhere, restoring native scroll.
+Lenis is basically the smooth scrolling that some websites have - this removes it
 
-Install: `chrome://extensions` → enable Developer mode → Load unpacked → select this folder.
+entire program is this line:
+
+`addEventListener('wheel',e=>document.documentElement.classList.contains('lenis')&&e.stopImmediatePropagation(),{capture:true,passive:true})\`
 
 MIT License.
